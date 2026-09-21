@@ -40,9 +40,9 @@ Please send only what is needed. Do not send passwords or unnecessary informatio
 
 ## 4. Advertising and Privacy Choices
 
-Rewarded advertising is planned through Unity LevelPlay, Unity Ads and related advertising services. Google UMP presents and manages privacy choices; Google Mobile Ads is not the game's ad-serving system. **Ads currently remain blocked.** The European privacy message has not yet been published.
+Rewarded advertising is planned through Unity LevelPlay, Unity Ads and related advertising services. Google UMP presents and manages privacy choices; Google Mobile Ads is not the game's ad-serving system. **Ads currently remain blocked.** Final consent validation remains pending after AdMob account approval.
 
-Once available, the form will allow you to consent, refuse or select Manage options. You will be able to revisit choices through Privacy preferences in Settings when available. **Without the required advertising consent, no advertising requests are made.** There is no non-personalized-ad fallback after refusal.
+Open Privacy preferences in Settings to access the available privacy options. Where a consent form is presented, you can consent, refuse or select Manage options. **Without the required advertising consent, no advertising requests are made.** There is no non-personalized-ad fallback after refusal.
 
 Normal gameplay and ordinary offline rewards remain available without advertising consent. Opening the game, pressing a rewarded-ad button, participating in testing or reading this policy does not constitute that consent.
 

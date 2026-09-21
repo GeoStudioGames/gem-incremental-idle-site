@@ -40,9 +40,9 @@ Przesyłaj tylko potrzebne informacje. Nie wysyłaj haseł ani zbędnych danych 
 
 ## 4. Reklamy i wybory prywatności
 
-Reklamy z nagrodą są planowane za pośrednictwem Unity LevelPlay, Unity Ads i powiązanych usług reklamowych. Google UMP prezentuje i obsługuje wybory prywatności; Google Mobile Ads nie jest systemem wyświetlania reklam w grze. **Reklamy pozostają obecnie zablokowane.** Europejski komunikat prywatności nie został jeszcze opublikowany.
+Reklamy z nagrodą są planowane za pośrednictwem Unity LevelPlay, Unity Ads i powiązanych usług reklamowych. Google UMP prezentuje i obsługuje wybory prywatności; Google Mobile Ads nie jest systemem wyświetlania reklam w grze. **Reklamy pozostają obecnie zablokowane.** Końcowa weryfikacja zgody pozostaje do wykonania po zatwierdzeniu konta AdMob.
 
-Po udostępnieniu formularz pozwoli wyrazić zgodę, odmówić jej lub wybrać Manage options. Do wyborów będzie można wrócić przez Privacy preferences w Settings, gdy funkcja będzie dostępna. **Bez wymaganej zgody reklamowej nie są wysyłane żądania reklam.** Po odmowie nie stosujemy zastępczego wyświetlania reklam niespersonalizowanych.
+Otwórz Privacy preferences w Settings, aby uzyskać dostęp do dostępnych opcji prywatności. Jeśli formularz zgody jest wyświetlany, możesz wyrazić zgodę, odmówić jej lub wybrać Manage options. **Bez wymaganej zgody reklamowej nie są wysyłane żądania reklam.** Po odmowie nie stosujemy zastępczego wyświetlania reklam niespersonalizowanych.
 
 Zwykła rozgrywka i zwykłe nagrody offline pozostają dostępne bez zgody reklamowej. Otwarcie gry, naciśnięcie przycisku reklamy z nagrodą, udział w testach ani przeczytanie tej polityki nie stanowią takiej zgody.
 
