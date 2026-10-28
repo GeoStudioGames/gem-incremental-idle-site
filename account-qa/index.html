@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<title>Gem Engine — próba zgłoszenia QA</title>
+<link rel="stylesheet" href="./portal.css">
+<script defer src="./config.js"></script><script defer src="./validator.js"></script>
+<script defer src="./core.js"></script><script defer src="./ui.js"></script><script defer src="./boot.js"></script>
+</head><body><main>
+<header><p class="eyebrow">GEO STUDIO / GEM ENGINE</p><span class="badge" id="mode">OFFLINE — usługi wyłączone</span>
+<h1>Testowe zgłoszenie.<br>Twoje istniejące konto.</h1>
+<p class="lead">To próba w <strong>account-deletion-qa</strong>. Strona nie usuwa konta, nie resetuje postępu i nie tworzy nowego profilu.</p></header>
+<aside class="draft"><strong id="mode-title">Gotowy podgląd lokalny — bez połączenia z usługami.</strong>
+<p id="mode-detail">Nie ustalono jeszcze zatwierdzonego adresu HTTPS. Wszystkie etapy są wyłączone. Otwarcie pliku nie ładuje Google i niczego nie wysyła.</p></aside>
+<div class="steps">
+<section aria-labelledby="title-identity"><div class="step-heading"><span class="number">01</span><h2 id="title-identity">Poznaj własny Player ID</h2><span class="gate" id="gate-identity">Wyłączony</span></div>
+<p>Po przyszłej zgodzie wybierzesz oryginalne Google używane w grze. Nie musisz znać Player ID przed tym etapem. Brak istniejącego konta zakończy próbę.</p>
+<label><input id="login-consent" type="checkbox" disabled>Chcę wykonać zatwierdzone logowanie do mojego istniejącego profilu w QA.</label>
+<button id="login" disabled>Pokaż wybór Google</button><div id="google"></div>
+<div class="identity-box"><span class="label">Tylko w tym widoku</span><p id="player">Player ID pojawi się dopiero po zatwierdzonym logowaniu.</p></div>
+<label for="owner-id">Po sprawdzeniu właściwego Google wpisz wyświetlony Player ID</label><input id="owner-id" type="text" maxlength="128" autocomplete="off" spellcheck="false" disabled>
+<label><input id="owner-confirm" type="checkbox" disabled>Potwierdzam: to moje istniejące konto, które wybrałem do próby.</label>
+<button id="accept-owner" disabled>Potwierdź ten profil</button>
+<p class="note">Tożsamość Unity należy do projektu. QA nie tworzy odrębnego konta. Wybór Twojego konta nie oznacza zgody na usuwanie, reset lub synchronizację postępu.</p>
+</section>
+<section aria-labelledby="title-read"><div class="step-heading"><span class="number">02</span><h2 id="title-read">Sprawdź przygotowane miejsce</h2><span class="gate" id="gate-read">Wyłączony</span></div>
+<p>Operator najpierw osobno przygotuje pusty rekord Ready przy wyłączonym przyjmowaniu. Ta strona tylko go odczytuje — nigdy nie tworzy ani nie poprawia rekordu.</p>
+<label for="slot">slotId odebrany od operatora (32 małe znaki hex)</label><input id="slot" type="text" maxlength="32" autocomplete="off" spellcheck="false" disabled>
+<label><input id="slot-confirm" type="checkbox" disabled>Operator potwierdził przygotowanie tego slotu dla mojego Player ID w QA.</label>
+<button id="accept-slot" disabled>Przyjmij wskazany slot</button><button id="read" disabled>Odczytaj własny rekord raz</button>
+<p id="readback" class="note">Nie odczytano rekordu Protected.</p>
+</section>
+<section aria-labelledby="title-get"><div class="step-heading"><span class="number">03</span><h2 id="title-get">Sprawdź gotowość modułu</h2><span class="gate" id="gate-get">Wyłączony</span></div>
+<p>Po odrębnym odbiorze aktywnej konfiguracji QA można wykonać jeden GetRequest. Obecny moduł pozostaje wyłączony. Prawidłowy odczyt Ready nie jest jeszcze zgłoszeniem.</p>
+<button id="get" disabled>Sprawdź GetRequest raz</button></section>
+<section aria-labelledby="title-submit"><div class="step-heading"><span class="number">04</span><h2 id="title-submit">Potwierdź jedno zgłoszenie</h2><span class="gate" id="gate-submit">Wyłączony</span></div>
+<p>Zakres: konto gry Gem: Incremental Idle i powiązane dane. W tej próbie rejestrujemy tylko zgłoszenie QA; operator nie przechodzi do kasowania.</p>
+<label><input id="consent" type="checkbox" disabled>Wybrałem właściwe konto i świadomie potwierdzam testowe żądanie dotyczące konta gry i powiązanych danych. Nie zlecam rzeczywistego usunięcia w tej próbie.</label>
+<button id="submit" class="primary" disabled>Zarejestruj jedno zgłoszenie QA</button>
+<p id="used" class="draft" hidden>Próba wysłania została zużyta. Nie ponawiaj przez odświeżenie strony. Odbiór lub nieznany wynik wymaga dalszej decyzji operatora.</p>
+<p id="receipt"></p></section></div>
+<section class="result" aria-labelledby="result-title"><h2 id="result-title">Wynik bieżącego kroku</h2><p id="status" role="status" aria-live="polite">Podgląd offline. Niczego nie wysłano.</p>
+<button id="cancel" disabled>Zamknij lokalną sesję</button><p class="note">Zamknięcie czyści dane w tym widoku. Nie wylogowuje całego Google i nie wycofuje wcześniej zapisanego zgłoszenia.</p></section>
+<details><summary>Co będzie potrzebne przed prawdziwym logowaniem?</summary><p>Najpierw wybór i odbiór konkretnego adresu HTTPS, hostingu, Google OAuth i CORS. Potem osobne dopuszczenie wybranego etapu. Nie włączaj przełączników na podstawie samego błędu. Nie podawaj tutaj kluczy usług, haseł ani tokenów.</p><p>Nie eksportuj odpowiedzi logowania, nagłówków lub plików HAR. Player ID i slot pozostają prywatnie w pamięci tego widoku. Strona nie zapisuje sesji w przeglądarce.</p></details>
+<footer><p>GemEngineDeletionRequestsQA · account-deletion-qa</p><p>Kontrole w przeglądarce nie stanowią serwerowej blokady innych graczy ani twardego limitu kosztów.</p></footer>
+<noscript><p>JavaScript jest wyłączony. Nadal oglądasz tylko opis etapów; wszystkie działania pozostają niedostępne.</p></noscript>
+</main></body></html>
