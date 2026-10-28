@@ -8,7 +8,7 @@
     moduleName: 'GemEngineDeletionRequestsQA',
     googleWebClientId: '779806693348-fgjd56dhqdjf8hk88gs8s3lurcqac18e.apps.googleusercontent.com',
     policyActivationReviewed: false, singleSubmitApproved: false,
-    gates: { identity: true, protectedRead: false, getRequest: false, submitRequest: false }
+    gates: { identity: true, protectedRead: true, getRequest: false, submitRequest: false }
   };
   Object.freeze(config.gates);
   globalThis.GEQA_CONFIG = Object.freeze(config);
